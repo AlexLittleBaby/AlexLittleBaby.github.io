@@ -2808,7 +2808,7 @@ ul.breadcrumb li:last-child {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #5effb1;
+  background: #ffffd5;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -2840,6 +2840,26 @@ ul.breadcrumb li:last-child {
 #header,
 #footer {
   background-color: #5ff;
+}
+#sidebar,
+header {
+  z-index: 1 !important;
+}
+.main {
+  padding-bottom: 200px;
+}
+.sidebar {
+  box-shadow: none;
+}
+.wobbleTransparentBK {
+  background-color: rgba(0,0,0,0) !important;
+}
+.wobbleTransparentLine {
+  border-color: rgba(0,0,0,0) !important;
+}
+#header,
+#footer {
+  background-color: #f5f5f5;
 }
 #sidebar,
 header {
