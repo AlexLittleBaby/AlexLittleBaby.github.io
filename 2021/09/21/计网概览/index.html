@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/apple-touch-icon-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"zzyko.top","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","Muse | Mist":320,"width":240,"display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+
+
+
+
+
+
+
+  <meta property="og:type" content="article">
+<meta property="og:title" content="计网概览">
+<meta property="og:url" content="https://zzyko.top/2021/09/21/%E8%AE%A1%E7%BD%91%E6%A6%82%E8%A7%88/index.html">
+<meta property="og:site_name" content="pudding&#39;s">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://www.sir-yl.top/wp-content/uploads/2021/12/爱上紫禁城-初雪-e1640751759404.jpg">
+<meta property="article:published_time" content="2021-09-21T04:44:52.000Z">
+<meta property="article:modified_time" content="2021-12-29T04:22:56.719Z">
+<meta property="article:author" content="Alex">
+<meta property="article:tag" content="803计算机网络">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://www.sir-yl.top/wp-content/uploads/2021/12/爱上紫禁城-初雪-e1640751759404.jpg">
+
+<link rel="canonical" href="https://zzyko.top/2021/09/21/%E8%AE%A1%E7%BD%91%E6%A6%82%E8%A7%88/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>计网概览 | pudding's</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">pudding's</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">lives | others</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">8</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">4</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">15</span></a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://zzyko.top/2021/09/21/%E8%AE%A1%E7%BD%91%E6%A6%82%E8%A7%88/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/mr.jpg">
+      <meta itemprop="name" content="Alex">
+      <meta itemprop="description" content="我们不妨大胆些，爱一个人，攀一座山，追一个梦">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="pudding's">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          计网概览
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-09-21 12:44:52" itemprop="dateCreated datePublished" datetime="2021-09-21T12:44:52+08:00">2021-09-21</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-12-29 12:22:56" itemprop="dateModified" datetime="2021-12-29T12:22:56+08:00">2021-12-29</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">学习</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2021/09/21/%E8%AE%A1%E7%BD%91%E6%A6%82%E8%A7%88/" class="post-meta-item leancloud_visitors" data-flag-title="计网概览" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/09/21/%E8%AE%A1%E7%BD%91%E6%A6%82%E8%A7%88/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/09/21/%E8%AE%A1%E7%BD%91%E6%A6%82%E8%A7%88/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="far fa-file-word"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>9.8k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="far fa-clock"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>9 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><img src="http://www.sir-yl.top/wp-content/uploads/2021/12/爱上紫禁城-初雪-e1640751759404.jpg" alt=""><br><span id="more"></span></p>
+<h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><h3 id="1-1-计算机网络的定义"><a href="#1-1-计算机网络的定义" class="headerlink" title="1.1 计算机网络的定义"></a>1.1 计算机网络的定义</h3><p>计算机网络是利用通信线路将地理位置分散的、具有独立功能的许多计算机系统连接起来，按照某种协议进行数据通信，以实现资源共享的信息系统。</p>
+<h3 id="1-2-计算机网络的功能"><a href="#1-2-计算机网络的功能" class="headerlink" title="1.2 计算机网络的功能"></a>1.2 计算机网络的功能</h3><ul>
+<li>数据通信–计算机网络最基本的功能</li>
+<li>资源共享–计算机网络的主要目的<br>集中管理、实现分布式处理 、负荷均衡、 提高计算机可用性</li>
+</ul>
+<h3 id="1-3-计算机网络的拓扑结构的类型"><a href="#1-3-计算机网络的拓扑结构的类型" class="headerlink" title="1.3 计算机网络的拓扑结构的类型"></a>1.3 计算机网络的拓扑结构的类型</h3><p>①　星型（<span class="label primary">优点</span>：网络结构简单，便于控制，建网容易，易于扩展；<span class="label info">缺点</span>：中心结点的可靠性问题是网络可靠性的瓶颈）<br>②　环型（<span class="label primary">优点</span>：结构简单，实现容易，数据传输延迟确定；<span class="label info">缺点</span>：每两个结点之间的通信线路都是网络可靠性的瓶颈。常用于局域网）<br>③　总线型（<span class="label primary">优点</span>：结构简单灵活，可扩充，设备投入量少，成本低，安装使用方便；<span class="label info">缺点</span>：某个工作站点出现故障时，对整个网络系统影响较大，另外实时性差，当结点通信量增加时，性能会急剧下降）<br>④　树型（树型结构适用于相邻层通信较多的情况）<br>⑤　全互联型（<span class="label primary">优点</span>：无需路由选择，通信方便；<span class="label info">缺点</span>：网络连接复杂，仅在结点少。距离很近的环境中使用）<br>⑥　网状拓扑结构（又称无规则型结构，常在结点数较多且地域范围大的环境使用。<span class="label primary">优点</span>：系统可靠性高；<span class="label info">缺点</span>：结构复杂，必须采用路由选择算法与流量控制方法）</p>
+<h3 id="1-4-OSI-RM及其了解各层的功能"><a href="#1-4-OSI-RM及其了解各层的功能" class="headerlink" title="1.4 OSI/RM及其了解各层的功能"></a>1.4 OSI/RM及其了解各层的功能</h3><div class="note info no-icon">
+            <p>应用层—表示层—会话层—传输层—网络层—数据链路层—物理层</p>
+          </div>
+<p><strong>物理层</strong>—最底层，是整个开放系统的基础，为设备之间的数据通信提供传输媒体及互连设备，为数据传输提供可靠的环境。是osi中唯一涉及通信介质的一层，定义了硬件接口的一系列标准。<br><strong>数据链路层</strong>—在不可靠的物理线路上实现数据可靠的传输，即数据链路层提供网络中相邻结点之间可靠的数据通信。其中介质访问控制层（MAC）、逻辑链路控制层（LLC）属于该层。<br><strong>网络层</strong>—为通信子网的最高层，完成网络中任意主机间数据传输。<br><strong>传输层</strong>—面向通信的层次中的最高层，面向应用的层次中的最底层，在源主机进程与目标主机进程之间提供可靠的端到端通信。<br><strong>会话层</strong>—允许在不同机器上的两个应用建立、使用和结束会话。<br><strong>表示层</strong>—表示层下面的各层中关注的事如何传递数据位，而表示层关注的是所传递的信息的语法和语义。<br><strong>应用层</strong>—为应用进程提供了访问OSI环境的手段，是应用进程使用OSI功能的唯一窗口。</p>
+<h3 id="1-5-TCP-IP参考模型"><a href="#1-5-TCP-IP参考模型" class="headerlink" title="1.5 TCP/IP参考模型"></a>1.5 TCP/IP参考模型</h3><p>应用层—传输层—网际层—网络接口层</p>
+<h3 id="1-6-网络高速化"><a href="#1-6-网络高速化" class="headerlink" title="1.6 网络高速化"></a>1.6 网络高速化</h3><p>线路通信速率呈数量级增长 协议集向高速化方向发展 交换机/路由器设备的高速化</p>
+<h3 id="1-7-计算机网络协议、接口和服务的概念"><a href="#1-7-计算机网络协议、接口和服务的概念" class="headerlink" title="1.7 计算机网络协议、接口和服务的概念"></a>1.7 计算机网络协议、接口和服务的概念</h3><p>网络协议：<br>①　语义—指对构成协议的协议元素含义的解释；<br>②　语法—用于规定将若干个协议元素和数据组合在一起来表达一个完整的内容时所应遵循的格式，即对信息的数据结构做一种规定；<br>③　时序—指通信中各事件实现顺序的详细说明。<br>接口：同一结点网络协议内相邻层之间交换信息的连接点。<br>服务：服务是指某一层向它上一层提供的一组操作。</p>
+<h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><h3 id="2-1-物理层的特性"><a href="#2-1-物理层的特性" class="headerlink" title="2.1 物理层的特性"></a>2.1 物理层的特性</h3><ul>
+<li>机械特性</li>
+<li>电气特性 </li>
+<li>功能特性 </li>
+<li>规程特性</li>
+</ul>
+<h3 id="2-2-奈奎斯特定理和香农定理"><a href="#2-2-奈奎斯特定理和香农定理" class="headerlink" title="2.2 奈奎斯特定理和香农定理"></a>2.2 奈奎斯特定理和香农定理</h3><p>奈奎斯特定理：<br>理论上在理想低通信道下的最高码元传输速率为B = 2W Baud，其中Baud(波特)是码元传输速率单位，W是理想低通信道下的带宽，单位是赫兹（Hz）。<br>香农定理：<br>①　模拟信道的极限信息传输速率：C = Wlog<sub>2</sub>(1+S/N) bit/s，dB = 10log<sub>10</sub>S/N其中w为信道的带宽（Hz），S为信道内所传信号的平均功率，N为信道内部的高斯噪声功率。<br>②　数字信道的极限信息传输速率：D = 2Wlog<sub>2</sub>M，M为码元符号所能取的离散值的个数，即M进制。</p>
+<h3 id="2-3-光纤的优点及其两种模式"><a href="#2-3-光纤的优点及其两种模式" class="headerlink" title="2.3 光纤的优点及其两种模式"></a>2.3 光纤的优点及其两种模式</h3><p>优点：光纤具有传输距离远、传输速度高、频带宽、信号衰减小、不受电磁与噪音的干扰等优点，并且具有很好的保密性能。<br>两种模式：</p>
+<ul>
+<li>LED(发光二极管)——多模光纤——频带较窄，传输特性较差；</li>
+<li>ILD（激光）——单模光纤——频带较宽，传输特性好，光在其中沿直线传播。</li>
+</ul>
+<h3 id="2-4-三种基本的调制方法"><a href="#2-4-三种基本的调制方法" class="headerlink" title="2.4 三种基本的调制方法"></a>2.4 三种基本的调制方法</h3><p>公有的调制方法名称：一是模拟调制法，二是键控法。<br>①　幅移键控法（ASK)：通过改变载波信号振幅来表示数字信号1、0；ASK信号实现容易，技术简单，但容易受增益变化的影响，抗干扰能力差；可用相干检测法进行解调。<br>②　频移键控法（FSK）:通过改变载波信号角频率来表示数字信号1、0；FSK实现容易，技术简单，抗干扰能力强，是目前最常用的调制技术；可用相干检测法、鉴频法等进行解调。<br>③　相移键控法（PSK）：通过改变载波信号相位值来表示数字信号1、0；PSK有较强的抗干扰能力，且比FSK更有效；解调原理类似于ASK解调。</p>
+<h3 id="2-5-曼彻斯特编码和差分曼彻斯特编码"><a href="#2-5-曼彻斯特编码和差分曼彻斯特编码" class="headerlink" title="2.5 曼彻斯特编码和差分曼彻斯特编码"></a>2.5 曼彻斯特编码和差分曼彻斯特编码</h3><p><em>曼彻斯特编码</em>：目前应用最广泛的编码方式之一，其编码规则是每一位的中间有一个跳变，从低到高表示0，从高到低表示1。优点是位中间的跳变既可以作为数据，又可以作为时钟，无需另发同步信号，不含直流分量；缺点是效率较低。<br><em>差分曼彻斯特编码</em>：是前者的改进。不同在于每比特中间的跳变仅仅作为同步用，每比特的值根据其边界是否发生跳变来决定，发生跳变是1，否则是0。抗干扰能力更强，但需要更复杂的设备，且同样有效率低的问题。</p>
+<h3 id="2-6-两种数字传输系统（T1，E1）"><a href="#2-6-两种数字传输系统（T1，E1）" class="headerlink" title="2.6 两种数字传输系统（T1，E1）"></a>2.6 两种数字传输系统（T1，E1）</h3><p>脉冲编码调制（PCM），北美的24路PCM（T1）和欧洲的30/32路PCM(E1)。我国采用后者标准，T1的速率是1.544Mbit/s,E1的速率是2.048Mbit/s。</p>
+<h3 id="2-7-PCM的缺点（2个）"><a href="#2-7-PCM的缺点（2个）" class="headerlink" title="2.7 PCM的缺点（2个）"></a>2.7 PCM的缺点（2个）</h3><p>PCM数字传输系统缺点：速率标准不统一；不是同步传输。</p>
+<h2 id="第三章"><a href="#第三章" class="headerlink" title="第三章"></a>第三章</h2><h3 id="3-1-数据链路层的功能（5个）"><a href="#3-1-数据链路层的功能（5个）" class="headerlink" title="3.1 数据链路层的功能（5个）"></a>3.1 数据链路层的功能（5个）</h3><p>帧同步、透明传输、差错控制、流量控制、链路管理</p>
+<h3 id="3-2-常见的组帧的方法（4种）"><a href="#3-2-常见的组帧的方法（4种）" class="headerlink" title="3.2 常见的组帧的方法（4种）"></a>3.2 常见的组帧的方法（4种）</h3><p>字符计数法、含字节填充的分界符法、含位填充的分界标志法、物理层编码违例法</p>
+<h3 id="3-3-循环冗余校验码（CRC）的原理"><a href="#3-3-循环冗余校验码（CRC）的原理" class="headerlink" title="3.3 循环冗余校验码（CRC）的原理"></a>3.3 循环冗余校验码（CRC）的原理</h3><p>发送方和接收方预先商定一个除数p，发送方在发送数据前，在帧的数据部分后面追加一个校验和，使得追加之后的帧能够被除数 p除尽；接收方用接收到的帧除以除数p，如果余数不为零，则表明传输过程中有错误。</p>
+<h3 id="3-4-多帧滑动窗口与后退N帧协议"><a href="#3-4-多帧滑动窗口与后退N帧协议" class="headerlink" title="3.4 多帧滑动窗口与后退N帧协议"></a>3.4 多帧滑动窗口与后退N帧协议</h3><p>发送端在传出一个数据帧后，不等待确认信号的到来，就接着发送下一个数据帧。在经过一个往返时间之后，相应数据帧的确认信号（ACK）才到达发送端，这是发送端已经发出了后继的N-1个数据帧。当收到ACK帧后，就继续发送新数据帧，一旦收到否定确认帧（NAK），发送端就要回退N步，重新发送那个出错的数据帧以及后继的N-1个已经发送过的数据帧。</p>
+<h3 id="3-5-多路复用技术的一般形式（四种）"><a href="#3-5-多路复用技术的一般形式（四种）" class="headerlink" title="3.5 多路复用技术的一般形式（四种）"></a>3.5 多路复用技术的一般形式（四种）</h3><p>频分多路复用（FDM）、时分多路复用（TDM）、波分多路复用（WDM）、码分多路复用（CDM）</p>
+<h3 id="3-6-CSMA-CD协议"><a href="#3-6-CSMA-CD协议" class="headerlink" title="3.6 CSMA/CD协议"></a>3.6 CSMA/CD协议</h3><p>在以太网中使用随机争用型介质访问控制方法，即带有冲突检测的载波监听多路访问方法。CSMA/CD方法用来解决多结点如何共享公用总线的问题。</p>
+<h3 id="3-7-局域网的主要特征（5点）"><a href="#3-7-局域网的主要特征（5点）" class="headerlink" title="3.7 局域网的主要特征（5点）"></a>3.7 局域网的主要特征（5点）</h3><p>①　网络范围较小，最大不超过25km<br>②　传输速率较高，一般为10-100Mbit/s，甚至到10Gbit/s<br>③　误码率低，一般为10-8-10-11，最高可达10-12<br>④　结构简单，容易实现<br>⑤　一般采用方便的分布式传输控制方式</p>
+<h3 id="3-8-以太网物理层和MAC子层的功能（3和5点）"><a href="#3-8-以太网物理层和MAC子层的功能（3和5点）" class="headerlink" title="3.8 以太网物理层和MAC子层的功能（3和5点）"></a>3.8 以太网物理层和MAC子层的功能（3和5点）</h3><h4 id="以太网物理层："><a href="#以太网物理层：" class="headerlink" title="以太网物理层："></a>以太网物理层：</h4><p>①　信号的编码与译码<br>②　为进行同步用的前同步码的产生和去除<br>③　比特的传输与接受</p>
+<h4 id="MAC子层："><a href="#MAC子层：" class="headerlink" title="MAC子层："></a>MAC子层：</h4><p>①　负责物理层上的无差错的通信<br>②　将上层传递下来的数据封装成帧进行发送，接收时进行拆封<br>③　实现和维护MAC协议<br>④　比特差错检测<br>⑤　寻址</p>
+<h3 id="3-9-以太网的帧格式"><a href="#3-9-以太网的帧格式" class="headerlink" title="3.9 以太网的帧格式"></a>3.9 以太网的帧格式</h3><p>总线网使用的帧结构有两种标准，一个是IEEE802.3标准，另一个是DIX Ethernet V2以太网标准。</p>
+<h3 id="3-10-划分VLAN的方法（5种）"><a href="#3-10-划分VLAN的方法（5种）" class="headerlink" title="3.10 划分VLAN的方法（5种）"></a>3.10 划分VLAN的方法（5种）</h3><p>VLAN是virtual VLN（虚拟局域网）的简写。5种划分：<br>按交换端口号 按MAC地址 按第三层协议 使用IP组播 基于策略（实现VLAN最有利）</p>
+<h3 id="3-11-无线局域网的DCF和PCF"><a href="#3-11-无线局域网的DCF和PCF" class="headerlink" title="3.11 无线局域网的DCF和PCF"></a>3.11 无线局域网的DCF和PCF</h3><p>MAC层的低层是分布式协调功能（DCF），DCF使用一个竞争算法来提供对所有通信的访问，普通异步通信直接使用DCF。PCF（点协调功能）是集中的MAC算法，该算法用来提供无竞争的服务。<br>DCF：DCF子层使用简单的CSMA算法。如果一个站点有一个MAC帧要发送，它先监听介质，如果介质空闲，站点可以发送，否则站点必须等待，直到现在的传输完毕，才能进行传输。<br>PCF：是在DCF之外实现的一个可供选择的访问方式，其操作包括集中轮询主管的轮询。</p>
+<h3 id="3-12-广域网的主要特性（4点）"><a href="#3-12-广域网的主要特性（4点）" class="headerlink" title="3.12 广域网的主要特性（4点）"></a>3.12 广域网的主要特性（4点）</h3><p>1.广域网运行在超出局域网地理范围的区域内；<br>2.使用各种类型的串行连接来接入广泛地理领域内的宽带；<br>3.连接分布在广泛地理领域内的设备；<br>4.使用电信运营商的服务。</p>
+<h3 id="3-13-数据报服务的特点"><a href="#3-13-数据报服务的特点" class="headerlink" title="3.13 数据报服务的特点"></a>3.13 数据报服务的特点</h3><p>主机只要想发送数据就可随时发送，每个分组独立的选择路由。但是不能保证按发送顺序交付给目的站，是不可靠的，是一种“尽最大努力交付”的服务。</p>
+<h3 id="3-14-虚电路服务与数据报服务的主要区别（7方面）"><a href="#3-14-虚电路服务与数据报服务的主要区别（7方面）" class="headerlink" title="3.14 虚电路服务与数据报服务的主要区别（7方面）"></a>3.14 虚电路服务与数据报服务的主要区别（7方面）</h3><h3 id="3-15-X-25的层次（三层）"><a href="#3-15-X-25的层次（三层）" class="headerlink" title="3.15 X.25的层次（三层）"></a>3.15 X.25的层次（三层）</h3><ul>
+<li>物理层（DTE/DCE物理接口特性定义为物理层）</li>
+<li>数据链路层</li>
+<li>分组层（分组层协议，负责安排管理DTE之间的虚电路连接）</li>
+</ul>
+<h3 id="3-16-帧中继与X-25的主要区别（三点）"><a href="#3-16-帧中继与X-25的主要区别（三点）" class="headerlink" title="3.16 帧中继与X.25的主要区别（三点）"></a>3.16 帧中继与X.25的主要区别（三点）</h3><p>1.载送呼叫控制信令的逻辑连接和用户数据是分开的，因此中间结点无需为每个连接的呼叫控制保持状态表；<br>2.逻辑连接的复用和交换发生在第二层，而不是第三层，从而减少了处理的层次；<br>3.结点-结点之间无须流量控制和差错控制，由高层负责端-端的流量控制和差错控错。</p>
+<h3 id="3-17-帧中继的特点（三点）"><a href="#3-17-帧中继的特点（三点）" class="headerlink" title="3.17 帧中继的特点（三点）"></a>3.17 帧中继的特点（三点）</h3><p>帧中继提供面向连接的数据链路层服务，具有下列特点：<br>①　保持网络入口处和出口处所传输的帧的顺序<br>②　保证不交付重复帧<br>③　帧丢失率很小</p>
+<h3 id="3-18-PPP组成（三部分）"><a href="#3-18-PPP组成（三部分）" class="headerlink" title="3.18 PPP组成（三部分）"></a>3.18 PPP组成（三部分）</h3><p>PPP协议提供了建立、配置、维护和终止点到点的连接的方法，其帧格式是面向字符的。3个部分组成：<br>①　将数据报封装的串行链路的方法。既支持异步链路，也支持面向比特的同步链路<br>②　链路控制协议（LCP）。用来建立、配置和测试数据链路连接<br>③　网络控制协议（NCP）。支持不同的网络层协议。</p>
+<h3 id="3-19-HDLC的帧结构"><a href="#3-19-HDLC的帧结构" class="headerlink" title="3.19 HDLC的帧结构"></a>3.19 HDLC的帧结构</h3><h3 id="3-20-网桥的类型（两种）"><a href="#3-20-网桥的类型（两种）" class="headerlink" title="3.20 网桥的类型（两种）"></a>3.20 网桥的类型（两种）</h3><p>透明网桥：指局域网上的站点并不知道所发送的帧经过哪几个网桥，因为网桥对各站来说是看不见的。透明网桥是即插即用设备，连接到局域网上后需要用生成树算法来建立转发表。<br>源路由网桥：生成树网桥的优点易于安装，无须人工输入路由信息，但没有最佳利用带宽。而源路由网桥核心思想是由帧的发送者显示地指明路由信息。路由信息由网桥地址和LAN标识符的序列组成，包含在帧头中。</p>
+<h2 id="第四章"><a href="#第四章" class="headerlink" title="第四章"></a>第四章</h2><h3 id="4-1-网络的异构性表现在哪些方面（4方面）"><a href="#4-1-网络的异构性表现在哪些方面（4方面）" class="headerlink" title="4.1 网络的异构性表现在哪些方面（4方面）"></a>4.1 网络的异构性表现在哪些方面（4方面）</h3><p>1.不同类型的网络（广域网、城域网和局域网）<br>2.使用不同类型通信协议的网络（Ethernet、Token Ring、ATM等）<br>3.不同类型的计算机系统（大型机、小型机、工作站和微型机）<br>4.使用不同类型操作系统的计算机（Windows、UNIX、OS/2和Linux等）</p>
+<h3 id="4-2-中继系统的种类（5种）"><a href="#4-2-中继系统的种类（5种）" class="headerlink" title="4.2 中继系统的种类（5种）"></a>4.2 中继系统的种类（5种）</h3><p>1.物理层中继系统，即中继器<br>2.数据链路层中继系统，即网桥或桥接器<br>3.网络层中继系统，即路由器<br>4.网桥和路由器的混合物，即桥路器<br>5.任何比网络层高的层次上的中继系统，即网关</p>
+<h3 id="4-3-拥塞控制算法（四种）"><a href="#4-3-拥塞控制算法（四种）" class="headerlink" title="4.3 拥塞控制算法（四种）"></a>4.3 拥塞控制算法（四种）</h3><div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:center">表头1</th>
+<th style="text-align:center">表头2</th>
+<th style="text-align:center">表头3</th>
+<th style="text-align:center">表头4</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">通信量整形</td>
+<td style="text-align:center">分组丢弃算法</td>
+<td style="text-align:center">缓冲区分配算法</td>
+<td style="text-align:center">定额控制算法</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3 id="4-4-距离向量路由算法"><a href="#4-4-距离向量路由算法" class="headerlink" title="4.4 距离向量路由算法"></a>4.4 距离向量路由算法</h3><p>在该算法中，每个路由器维持一张子网中每一个以其他路由器为索引的路由选择表，表中的每一个入口都对应于子网中的一个路由器。此入口包括两个部分，即希望使用的到达目的地输出线路和估计到达目的地所需的时间或距离。所用量度标准可为站点估计的时间延迟、该路由排队的分组估计总数或类似的值</p>
+<h3 id="4-5-链路状态路由算法"><a href="#4-5-链路状态路由算法" class="headerlink" title="4.5 链路状态路由算法"></a>4.5 链路状态路由算法</h3><p>先通过各个结点之间的路由信息交换，每个结点可获得关于整个网络的拓扑信息，得知网络中所有结点之间的链路连接和各条链路的代价（延迟、开销等）；然后将这些拓扑信息抽象成一张带权无向图；最后利用最短路径路由算法计算出到各个目的结点的最短路径。</p>
+<h3 id="4-6-IP地址的分类及其表示"><a href="#4-6-IP地址的分类及其表示" class="headerlink" title="4.6 IP地址的分类及其表示"></a>4.6 IP地址的分类及其表示</h3><h3 id="4-7-IP数据报的结构及其每个域的意义"><a href="#4-7-IP数据报的结构及其每个域的意义" class="headerlink" title="4.7 IP数据报的结构及其每个域的意义"></a>4.7 IP数据报的结构及其每个域的意义</h3><h3 id="4-8-子网及其掩码"><a href="#4-8-子网及其掩码" class="headerlink" title="4.8 子网及其掩码"></a>4.8 子网及其掩码</h3><p>划分子网的方法：从网络号的主机号借用若干个比特作为子网号subnet-id，而主机号host-id也就相应减少了若干个比特。于是两级的IP地址在本单位内部就变为三级的IP地址：网络号net-id、子网号subnet-id和主机号host-id，或者可以用以下记法来表示：IP地址：：={&lt;网络号&gt;，&lt;子网号&gt;，&lt;主机号&gt;}<br>子网掩码：子网掩码也是32位，由一串1和0组成，1表示在IP地址中网络号和子网号对应比特，而0表示在IP地址中主机号的对应比特。子网地址=子网掩码+IP地址。A类地址的默认子网掩码是255.0.0.0，B类地址的默认子网掩码是255.255.0.0，C类地址的默认子网掩码是255.255.255.0</p>
+<h3 id="4-9-CIDR"><a href="#4-9-CIDR" class="headerlink" title="4.9 CIDR"></a>4.9 CIDR</h3><p>CIDR使IP地址从三级编址回到了两级编址。<br>IP地址：：={&lt;网络前缀&gt;，&lt;主机号&gt;}。详情见P180.</p>
+<h3 id="4-10-ICMP差错报告报文的种类（5种）"><a href="#4-10-ICMP差错报告报文的种类（5种）" class="headerlink" title="4.10 ICMP差错报告报文的种类（5种）"></a>4.10 ICMP差错报告报文的种类（5种）</h3><p>目的站不可到达、源站抑制、超时、参数问题和改变路由</p>
+<h3 id="4-11-IPv6的特点（9点）"><a href="#4-11-IPv6的特点（9点）" class="headerlink" title="4.11 IPv6的特点（9点）"></a>4.11 IPv6的特点（9点）</h3><p>1.更大的地址空间，地址扩大到128位<br>2.减少路由选择表的长度<br>3.简化协议，是路由器处理分组更迅速<br>4.提供比当前IP更好的安全性（鉴别和保密）<br>5.增加对服务类型的注意，特别是实时数据<br>6.通过定义范围来帮助多播的实现<br>7.让主机可以不改变其地址即可漫游<br>8.协议未来还可以扩充<br>9.允许新旧协议共同存在一些时间</p>
+<h3 id="4-12-OSPF"><a href="#4-12-OSPF" class="headerlink" title="4.12 OSPF"></a>4.12 OSPF</h3><p>OSPF(开放最短路径优先协议)支持三种类型的连接和网络：<br>路由器间的点-点线路<br>由广播的多路访问网络（大多数LAN）<br>没有广播的多路访问网络（大多数的分组交换的WAN）<br>OSPFv6也是一种内部网关协议（IGP），它是一种基于层次概念的协议。该协议的报头标识字段值为89。</p>
+<h3 id="4-13-IP多播的概念和多播地址"><a href="#4-13-IP多播的概念和多播地址" class="headerlink" title="4.13 IP多播的概念和多播地址"></a>4.13 IP多播的概念和多播地址</h3><p>多播是IPv6数据包的3种基本目的地址类型之一，多播是一点对多点的通信。<br>多播地址：D类地址空间是专为IP多播组地址而定义的。每个多播组地址都落在从224.0.0.0-239.255.255.255的空间范围内。</p>
+<h3 id="4-14-转交地址的分类（2种）"><a href="#4-14-转交地址的分类（2种）" class="headerlink" title="4.14 转交地址的分类（2种）"></a>4.14 转交地址的分类（2种）</h3><p>外地代理转交地址 配置转交地址</p>
+<h3 id="4-15-路由器的优缺点（7和3点）"><a href="#4-15-路由器的优缺点（7和3点）" class="headerlink" title="4.15 路由器的优缺点（7和3点）"></a>4.15 路由器的优缺点（7和3点）</h3><h4 id="优点："><a href="#优点：" class="headerlink" title="优点："></a>优点：</h4><p>①　更适用于连接大规模的异种网络<br>②　可实现复杂的网络拓扑结构，负载共享和有更强的最优路径选择能力<br>③　能更好地处理多媒体<br>④　有利于提高网络的安全性和保密性<br>⑤　可隔离不需要的通信量<br>⑥　有较好的拥塞控制能力<br>⑦　减少主机负担</p>
+<h4 id="缺点："><a href="#缺点：" class="headerlink" title="缺点："></a>缺点：</h4><p>①　不支持非路由协议<br>②　安装复杂<br>③　价格高</p>
+<h2 id="第五章"><a href="#第五章" class="headerlink" title="第五章"></a>第五章</h2><h3 id="5-1-传输层寻址与端口"><a href="#5-1-传输层寻址与端口" class="headerlink" title="5.1 传输层寻址与端口"></a>5.1 传输层寻址与端口</h3><p>数据链路层按MAC地址寻址，网络层按IP地址来寻址的，而传输层是按端口号来寻址的。<br>端口就是传输层服务访问点。不同的应用进程的报文可以通过不同的端口向下交付给传输层，再往下由传输层统一处理交给网络层，这一过程称为复用。相反，传输层从网络层收到数据统一处理后再根据不同的端口号向上交付给不同的应用进程，这一过程称为分用。从这个意义上讲，端口就是用来标志应用层的进程。<br>端口用一个16 bit 端口号进行标志，共允许有64k个端口号。端口号只具有本地意义，即端口号只是为了标志本计算机应用层中的各进程。根据端口号范围可将端口分为两类：<br>①　一般端口，用来随时分配给请求通信的客户进程<br>②　熟知端口，其数值一般为 0~1023</p>
+<h3 id="5-2-无连接服务与面向连接服务"><a href="#5-2-无连接服务与面向连接服务" class="headerlink" title="5.2 无连接服务与面向连接服务"></a>5.2 无连接服务与面向连接服务</h3><p>面向连接服务：基于电话系统模型，用户首先要建立一个连接，然后使用该链接，最后释放链接。<br>无连接服务：基于邮政系统模型，每一条报文都携带了完整的目标地址，所以每条报文都可以被系统独立地路由。</p>
+<h3 id="5-3-传输连接的建立与释放"><a href="#5-3-传输连接的建立与释放" class="headerlink" title="5.3 传输连接的建立与释放"></a>5.3 传输连接的建立与释放</h3><p>建立连接是个复杂的问题，实际上网络上可能会发生丢失、存储和重复分组的情况。<br>释放链接较前者稍简单一点。终止连接有两种方式，即非对称释放和对称释放，非对称释放很突然，可能会丢失数据。更好的一个方法可采用3次握手方法。</p>
+<h3 id="5-4-UDP的优点（4点）"><a href="#5-4-UDP的优点（4点）" class="headerlink" title="5.4 UDP的优点（4点）"></a>5.4 UDP的优点（4点）</h3><p>用户数据报协议（UDP），无连接协议。优点：发送数据之前不需要建立连接，发送数据完后不需要释放连接，因此减少了开销和发送数据之前的时延；UDP不使用拥塞控制，不保证可靠交付，因此主机不需要维持具有许多参数的复杂的连接状态表；UDP用户数据报只有8字节的首部开销，比TCP的20字节的首部要短；由于UDP没有拥塞控制，因此网罗出现的拥塞不会使源主机的发送速率降低。</p>
+<h3 id="5-5-TCP报文段报头格式"><a href="#5-5-TCP报文段报头格式" class="headerlink" title="5.5 TCP报文段报头格式"></a>5.5 TCP报文段报头格式</h3><h3 id="5-6-TCP的流量控制"><a href="#5-6-TCP的流量控制" class="headerlink" title="5.6 TCP的流量控制"></a>5.6 TCP的流量控制</h3><p>如果发送方把数据发送得过快，接收方可能会来不及接收，这就会造成数据的丢失。所谓流量控制就是让发送方的发送速率不要太快，要让接收方来得及接收。利用滑动窗口机制可以很方便地在TCP连接上实现对发送方的流量控制。</p>
+<h3 id="5-7-TCP的拥塞控制"><a href="#5-7-TCP的拥塞控制" class="headerlink" title="5.7 TCP的拥塞控制"></a>5.7 TCP的拥塞控制</h3><p>拥塞：即对资源的需求超过了可用的资源。若网络中许多资源同时供应不足，网络的性能就要明显变坏，整个网络的吞吐量随之负荷的增大而下降。<br>拥塞控制：防止过多的数据注入到网络中，这样可以使网络中的路由器或链路不致过载。拥塞控制所要做的都有一个前提：网络能够承受现有的网络负荷。拥塞控制是一个全局性的过程，涉及到所有的主机、路由器，以及与降低网络传输性能有关的所有因素。<br>流量控制：指点对点通信量的控制，是端到端的问题。流量控制所要做的就是抑制发送端发送数据的速率，以便使接收端来得及接收。</p>
+<h2 id="第六章"><a href="#第六章" class="headerlink" title="第六章"></a>第六章</h2><h3 id="6-1-三层C-S结构的优点（4点）"><a href="#6-1-三层C-S结构的优点（4点）" class="headerlink" title="6.1 三层C/S结构的优点（4点）"></a>6.1 三层C/S结构的优点（4点）</h3><p>①　具有灵活的硬件系统构成<br>②　提高程序的可维护性<br>③　利于变更和维护应用技术规范<br>④　进行严密的安全管理</p>
+<h3 id="6-2-P2P技术的特点（6点）"><a href="#6-2-P2P技术的特点（6点）" class="headerlink" title="6.2 P2P技术的特点（6点）"></a>6.2 P2P技术的特点（6点）</h3><p>非中心化 可扩展性 健壮性 高性价比 隐私保护 负载均衡</p>
+<h3 id="6-3-DNS的层次结构"><a href="#6-3-DNS的层次结构" class="headerlink" title="6.3 DNS的层次结构"></a>6.3 DNS的层次结构</h3><p>DNS 是一个分层级的分散式名称对应系统，有点像电脑的目录树结构：<br>在最顶端的是一个“root”，然后其下分为好几个基本类别名称，如：com、org、edu 等；<br>再下面是组织名称，如：ibm、microsoft、intel 等；<br>继而是主机名称，如：www、mail、ftp 等。<br>因为当初 internet 是从美国发展起的，所以当时并没有国域名称，但随着后来 internet 的蓬勃发展，DNS 也加进了诸如 tw、hk、cn 等国域名称。所以一个完整的 dns 名称就好象是这样的：www.xyz.com.tw，而整个名称对应的就是一个(或多个) IP 位址了</p>
+<h3 id="6-4-域名服务器的类型（3种）"><a href="#6-4-域名服务器的类型（3种）" class="headerlink" title="6.4 域名服务器的类型（3种）"></a>6.4 域名服务器的类型（3种）</h3><p>本地域名服务器 根域名服务器 授权域名服务器</p>
+<h3 id="6-5-Internet的应用协议-FTP-MIME-HTTP"><a href="#6-5-Internet的应用协议-FTP-MIME-HTTP" class="headerlink" title="6.5 Internet的应用协议:FTP,MIME,HTTP"></a>6.5 Internet的应用协议:FTP,MIME,HTTP</h3><p>HTTP是一种为了将位于全球各个地方的Web服务器中的内容发送给不特定多数用户而制订的协议。也就是说，可以把HTTP看作是旨在向不特定多数的用户“发放”文件的协议。而FTP是为了在特定主机之间“传输”文件而开发的协议。<br>MIME（Multipurpose Internet Mail Extensions，多用途Internet邮件扩展）。<br>MIME被用在电子邮件系统中，也应用到HTTP中。详情见P275/281</p>
+<h3 id="6-6-Web页面文档的分类（三种）"><a href="#6-6-Web页面文档的分类（三种）" class="headerlink" title="6.6 Web页面文档的分类（三种）"></a>6.6 Web页面文档的分类（三种）</h3><p>静态文档<br>动态文档<br>活动文档</p>
+<h3 id="6-7-生成动态文档的方法（4种）"><a href="#6-7-生成动态文档的方法（4种）" class="headerlink" title="6.7 生成动态文档的方法（4种）"></a>6.7 生成动态文档的方法（4种）</h3><p>CGI程序 内嵌的PHP JSP ASP</p>
+<h3 id="6-8-生成活动文档的方法（2种）"><a href="#6-8-生成活动文档的方法（2种）" class="headerlink" title="6.8 生成活动文档的方法（2种）"></a>6.8 生成活动文档的方法（2种）</h3><p>用java技术创建活动文档 用javascript技术创建活动文档</p>
+<h3 id="6-9-URL的格式"><a href="#6-9-URL的格式" class="headerlink" title="6.9 URL的格式"></a>6.9 URL的格式</h3><p>URL由三部分组成：资源类型、存放资源的主机域名、资源文件名。<br>　　URL的一般语法格式为:.<br>　　(带方括号[]的为可选项)：<br>　　protocol / hostname[:port] / path / [;parameters][?query]#fragment or file<br>1、protocol（协议）：指定使用的传输协议（各种Internet应用协议）<br>2、hostname（主机名）：是指存放资源的服务器的域名系统 (DNS) 主机名或 IP 地址。<br>3、:port（端口号）：整数，可选，省略时使用方案的默认端口，各种传输协议都有默认的端口号，如http的默认端口为80。如果输入时省略，则使用默认端口号。有时候出于安全或其他考虑，可以在服务器上对端口进行重定义，即采用非标准端口 号，此时URL中就不能省略端口号这一项。<br>4、path（路径）：由零或多个“/”符号隔开的字符串，一般用来表示主机上的一个目录或文件地址。<br>5、parameters（参数）：这是用于指定特殊参数的可选项。<br>6、query(查询)：可选，用于给动态网页（如使用CGI、ISAPI、PHP/JSP/ASP/ASP.NET等技术制作的网页）传递参数，可有多个参数，用“&amp;”符号隔开，每个参数的名和值用“=”符号隔开。<br>7、fragment（信息片断）：字符串，用于指定网络资源中的片断。例如一个网页中有多个名词解释，可使用fragment直接定位到某一名词解释。<br>8、file是资源文件名</p>
+<h3 id="6-10-网络管理系统逻辑模型"><a href="#6-10-网络管理系统逻辑模型" class="headerlink" title="6.10 网络管理系统逻辑模型"></a>6.10 网络管理系统逻辑模型</h3><p>通常一个网络管理系统在逻辑上由被管对象、管理进程和管理协议组成。</p>
+<h3 id="6-11-网络管理的主要功能（5个）"><a href="#6-11-网络管理的主要功能（5个）" class="headerlink" title="6.11 网络管理的主要功能（5个）"></a>6.11 网络管理的主要功能（5个）</h3><p>配置管理 性能管理 故障管理 计费管理 安全管理</p>
+<h3 id="6-12-被管对象的特性（5点）"><a href="#6-12-被管对象的特性（5点）" class="headerlink" title="6.12 被管对象的特性（5点）"></a>6.12 被管对象的特性（5点）</h3><p>1.类。表明被管对象拥有的属于哪个对象类。<br>2.属性。被管对象拥有的特性参量。<br>3.管理操作。可对被管对象施加的操作。<br>4.行为。被管对象对管理操作所做出的反应。<br>5.通报。被管对象可能主动发出的报告类信息。</p>
+<h3 id="6-13-SNMP的基本元素（三种）"><a href="#6-13-SNMP的基本元素（三种）" class="headerlink" title="6.13 SNMP的基本元素（三种）"></a>6.13 SNMP的基本元素（三种）</h3><p>管理者（管理进程） 代理 MIB</p>
+<h3 id="6-14-SNMPv3的安全模式（2种）"><a href="#6-14-SNMPv3的安全模式（2种）" class="headerlink" title="6.14 SNMPv3的安全模式（2种）"></a>6.14 SNMPv3的安全模式（2种）</h3><p>基于用户的安全模式（USM）基于视图的访问控制模式（VACM）</p>
+<h2 id="第七章"><a href="#第七章" class="headerlink" title="第七章"></a>第七章</h2><h3 id="7-1-标记交换原理"><a href="#7-1-标记交换原理" class="headerlink" title="7.1 标记交换原理"></a>7.1 标记交换原理</h3><p>标记交换就是根据分组中的“标记”检索交换机内部的转发信息库，使用转发消息库给定的出口信息完成该分组的转发。</p>
+<h3 id="7-2-MPLS的封装"><a href="#7-2-MPLS的封装" class="headerlink" title="7.2 MPLS的封装"></a>7.2 MPLS的封装</h3><p>MPLS 独立于第二和第三层协议，诸如ATM 和IP。它提供了一种方式，将IP地址映射为简单的具有固定长度的标签，用于不同的包转发和包交换技术。它是现有路由和交换协议的接口，如IP、ATM、帧中继、资源预留协议（RSVP）、开放最短路径优先（OSPF）等等。<br>在MPLS 中，数据传输发生在标签交换路径（LSP）上。LSP 是每一个沿着从源端到终端的路径上的结点的标签序列。现今使用着一些标签分发协议，如标签分发协议（LDP）、RSVP 或者建于路由协议之上的一些协议，如边界网关协议（BGP）及OSPF。因为固定长度标签被插入每一个包或信元的开始处，并且可被硬件用来在两个链接间快速交换包，所以使数据的快速交换成为可能。MPLS 主要设计来解决网路问题<br>通用MPLS封装包括标记栈、TTL和CoS(业务等级)等。</p>
+<h3 id="7-3标记分配的方式（3种）"><a href="#7-3标记分配的方式（3种）" class="headerlink" title="7.3标记分配的方式（3种）"></a>7.3标记分配的方式（3种）</h3><p>上游分配 下游分配 按需下游分配</p>
+<h3 id="7-4-与以路由器作为核心网络平台的技术相比，MPLS的主要优点（7点）"><a href="#7-4-与以路由器作为核心网络平台的技术相比，MPLS的主要优点（7点）" class="headerlink" title="7.4 与以路由器作为核心网络平台的技术相比，MPLS的主要优点（7点）"></a>7.4 与以路由器作为核心网络平台的技术相比，MPLS的主要优点（7点）</h3><p>1.转发处理简单<br>2.提供显式路由功能<br>3.能够进行业务量规划<br>4.提供QoS保证<br>5.入口一次完成业务流分类<br>6.提供多种分类细度<br>7.用一种转发方式实现各种业务的转发（包括单播、组播和有特定质量要求的单播等）</p>
+<h3 id="7-5-Intserv的局限性（5点）"><a href="#7-5-Intserv的局限性（5点）" class="headerlink" title="7.5 Intserv的局限性（5点）"></a>7.5 Intserv的局限性（5点）</h3><p>1.状态信息数与流的个数成正比，不具扩展性<br>2.对路由器的要求高，所有的路由器必须实现RSVP、接纳控制、MF分类和分组调度<br>3.该服务不适合于短生存期的数据流<br>4.许多应用需要某种形式的QoS,但是无法使用intserv模型来表达QoS请求<br>5.必要的策略控制和价格机制尚处于发展阶段，无法付诸应用</p>
+<h3 id="7-6-DiffServ的体系结构"><a href="#7-6-DiffServ的体系结构" class="headerlink" title="7.6 DiffServ的体系结构"></a>7.6 DiffServ的体系结构</h3><p>1.DS区域与DS区<br>2.区分服务标记域与区分服务标记DSCP<br>3.边界节点的传输分类与调节机制<br>4.每跳行为PHB、PHB组与PHB组簇</p>
+<h3 id="7-7-DiffServ的技术特点（4点）"><a href="#7-7-DiffServ的技术特点（4点）" class="headerlink" title="7.7 DiffServ的技术特点（4点）"></a>7.7 DiffServ的技术特点（4点）</h3><p>1.层次化结构<br>2.总体集中控制策略<br>3.利用面向对象的模块化思想与封装思想，增强了灵活性与通用性<br>4.不影响路由</p>
+<h2 id="第八章"><a href="#第八章" class="headerlink" title="第八章"></a>第八章</h2><h3 id="8-1-系统安全的三个方面"><a href="#8-1-系统安全的三个方面" class="headerlink" title="8.1 系统安全的三个方面"></a>8.1 系统安全的三个方面</h3><p>1.实体的安全：环境安全、设备安全、媒体安全<br>2.运行环境的安全：风险分析、审计跟踪、备份与恢复、应急技术<br>3.信息的安全：操作系统的安全、数据库的安全、网络安全、计算机病毒防护、访问控制、数据加密及其应用、鉴别</p>
+<h3 id="8-2-IPSec的主要优点"><a href="#8-2-IPSec的主要优点" class="headerlink" title="8.2 IPSec的主要优点"></a>8.2 IPSec的主要优点</h3><p>IPSec在传输层之下，对应用程序来说是透明的<br>IPSec对终端用户来说是透明的，因此，不必对用户进行安全机制的培训<br>如果需要的话，IPSec可以为个体用户提供安全保障，这样就可以保护企业内部的敏感信息</p>
+<h3 id="8-3-防火墙技术的种类"><a href="#8-3-防火墙技术的种类" class="headerlink" title="8.3 防火墙技术的种类"></a>8.3 防火墙技术的种类</h3><p>数据包过滤技术、代理服务技术</p>
+
+    </div>
+
+    
+    
+    
+        <div class="reward-container">
+  <div>一分钱也是钱</div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.png" alt="Alex 微信支付">
+        <p>微信支付</p>
+      </div>
+
+  </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Alex
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://zzyko.top/2021/09/21/%E8%AE%A1%E7%BD%91%E6%A6%82%E8%A7%88/" title="计网概览">https://zzyko.top/2021/09/21/计网概览/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/803%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/" rel="tag"><i class="fa fa-tag"></i>803计算机网络</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/09/21/%E8%8B%B1%E8%AF%AD%E7%AC%94%E8%AE%B0/" rel="prev" title="英语笔记">
+      <i class="fa fa-chevron-left"></i> 英语笔记
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/09/23/%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F/" rel="next" title="数学公式">
+      数学公式 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0"><span class="nav-number">1.</span> <span class="nav-text">第一章</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 计算机网络的定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9A%84%E5%8A%9F%E8%83%BD"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 计算机网络的功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9A%84%E6%8B%93%E6%89%91%E7%BB%93%E6%9E%84%E7%9A%84%E7%B1%BB%E5%9E%8B"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 计算机网络的拓扑结构的类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-OSI-RM%E5%8F%8A%E5%85%B6%E4%BA%86%E8%A7%A3%E5%90%84%E5%B1%82%E7%9A%84%E5%8A%9F%E8%83%BD"><span class="nav-number">1.4.</span> <span class="nav-text">1.4 OSI&#x2F;RM及其了解各层的功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-TCP-IP%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B"><span class="nav-number">1.5.</span> <span class="nav-text">1.5 TCP&#x2F;IP参考模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-6-%E7%BD%91%E7%BB%9C%E9%AB%98%E9%80%9F%E5%8C%96"><span class="nav-number">1.6.</span> <span class="nav-text">1.6 网络高速化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-7-%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE%E3%80%81%E6%8E%A5%E5%8F%A3%E5%92%8C%E6%9C%8D%E5%8A%A1%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-number">1.7.</span> <span class="nav-text">1.7 计算机网络协议、接口和服务的概念</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%AB%A0"><span class="nav-number">2.</span> <span class="nav-text">第二章</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-%E7%89%A9%E7%90%86%E5%B1%82%E7%9A%84%E7%89%B9%E6%80%A7"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 物理层的特性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-%E5%A5%88%E5%A5%8E%E6%96%AF%E7%89%B9%E5%AE%9A%E7%90%86%E5%92%8C%E9%A6%99%E5%86%9C%E5%AE%9A%E7%90%86"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 奈奎斯特定理和香农定理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-%E5%85%89%E7%BA%A4%E7%9A%84%E4%BC%98%E7%82%B9%E5%8F%8A%E5%85%B6%E4%B8%A4%E7%A7%8D%E6%A8%A1%E5%BC%8F"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 光纤的优点及其两种模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-%E4%B8%89%E7%A7%8D%E5%9F%BA%E6%9C%AC%E7%9A%84%E8%B0%83%E5%88%B6%E6%96%B9%E6%B3%95"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 三种基本的调制方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5-%E6%9B%BC%E5%BD%BB%E6%96%AF%E7%89%B9%E7%BC%96%E7%A0%81%E5%92%8C%E5%B7%AE%E5%88%86%E6%9B%BC%E5%BD%BB%E6%96%AF%E7%89%B9%E7%BC%96%E7%A0%81"><span class="nav-number">2.5.</span> <span class="nav-text">2.5 曼彻斯特编码和差分曼彻斯特编码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-6-%E4%B8%A4%E7%A7%8D%E6%95%B0%E5%AD%97%E4%BC%A0%E8%BE%93%E7%B3%BB%E7%BB%9F%EF%BC%88T1%EF%BC%8CE1%EF%BC%89"><span class="nav-number">2.6.</span> <span class="nav-text">2.6 两种数字传输系统（T1，E1）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-7-PCM%E7%9A%84%E7%BC%BA%E7%82%B9%EF%BC%882%E4%B8%AA%EF%BC%89"><span class="nav-number">2.7.</span> <span class="nav-text">2.7 PCM的缺点（2个）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E7%AB%A0"><span class="nav-number">3.</span> <span class="nav-text">第三章</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82%E7%9A%84%E5%8A%9F%E8%83%BD%EF%BC%885%E4%B8%AA%EF%BC%89"><span class="nav-number">3.1.</span> <span class="nav-text">3.1 数据链路层的功能（5个）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-%E5%B8%B8%E8%A7%81%E7%9A%84%E7%BB%84%E5%B8%A7%E7%9A%84%E6%96%B9%E6%B3%95%EF%BC%884%E7%A7%8D%EF%BC%89"><span class="nav-number">3.2.</span> <span class="nav-text">3.2 常见的组帧的方法（4种）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-%E5%BE%AA%E7%8E%AF%E5%86%97%E4%BD%99%E6%A0%A1%E9%AA%8C%E7%A0%81%EF%BC%88CRC%EF%BC%89%E7%9A%84%E5%8E%9F%E7%90%86"><span class="nav-number">3.3.</span> <span class="nav-text">3.3 循环冗余校验码（CRC）的原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-4-%E5%A4%9A%E5%B8%A7%E6%BB%91%E5%8A%A8%E7%AA%97%E5%8F%A3%E4%B8%8E%E5%90%8E%E9%80%80N%E5%B8%A7%E5%8D%8F%E8%AE%AE"><span class="nav-number">3.4.</span> <span class="nav-text">3.4 多帧滑动窗口与后退N帧协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-5-%E5%A4%9A%E8%B7%AF%E5%A4%8D%E7%94%A8%E6%8A%80%E6%9C%AF%E7%9A%84%E4%B8%80%E8%88%AC%E5%BD%A2%E5%BC%8F%EF%BC%88%E5%9B%9B%E7%A7%8D%EF%BC%89"><span class="nav-number">3.5.</span> <span class="nav-text">3.5 多路复用技术的一般形式（四种）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-6-CSMA-CD%E5%8D%8F%E8%AE%AE"><span class="nav-number">3.6.</span> <span class="nav-text">3.6 CSMA&#x2F;CD协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-7-%E5%B1%80%E5%9F%9F%E7%BD%91%E7%9A%84%E4%B8%BB%E8%A6%81%E7%89%B9%E5%BE%81%EF%BC%885%E7%82%B9%EF%BC%89"><span class="nav-number">3.7.</span> <span class="nav-text">3.7 局域网的主要特征（5点）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-8-%E4%BB%A5%E5%A4%AA%E7%BD%91%E7%89%A9%E7%90%86%E5%B1%82%E5%92%8CMAC%E5%AD%90%E5%B1%82%E7%9A%84%E5%8A%9F%E8%83%BD%EF%BC%883%E5%92%8C5%E7%82%B9%EF%BC%89"><span class="nav-number">3.8.</span> <span class="nav-text">3.8 以太网物理层和MAC子层的功能（3和5点）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%A5%E5%A4%AA%E7%BD%91%E7%89%A9%E7%90%86%E5%B1%82%EF%BC%9A"><span class="nav-number">3.8.1.</span> <span class="nav-text">以太网物理层：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MAC%E5%AD%90%E5%B1%82%EF%BC%9A"><span class="nav-number">3.8.2.</span> <span class="nav-text">MAC子层：</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-9-%E4%BB%A5%E5%A4%AA%E7%BD%91%E7%9A%84%E5%B8%A7%E6%A0%BC%E5%BC%8F"><span class="nav-number">3.9.</span> <span class="nav-text">3.9 以太网的帧格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-10-%E5%88%92%E5%88%86VLAN%E7%9A%84%E6%96%B9%E6%B3%95%EF%BC%885%E7%A7%8D%EF%BC%89"><span class="nav-number">3.10.</span> <span class="nav-text">3.10 划分VLAN的方法（5种）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-11-%E6%97%A0%E7%BA%BF%E5%B1%80%E5%9F%9F%E7%BD%91%E7%9A%84DCF%E5%92%8CPCF"><span class="nav-number">3.11.</span> <span class="nav-text">3.11 无线局域网的DCF和PCF</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-12-%E5%B9%BF%E5%9F%9F%E7%BD%91%E7%9A%84%E4%B8%BB%E8%A6%81%E7%89%B9%E6%80%A7%EF%BC%884%E7%82%B9%EF%BC%89"><span class="nav-number">3.12.</span> <span class="nav-text">3.12 广域网的主要特性（4点）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-13-%E6%95%B0%E6%8D%AE%E6%8A%A5%E6%9C%8D%E5%8A%A1%E7%9A%84%E7%89%B9%E7%82%B9"><span class="nav-number">3.13.</span> <span class="nav-text">3.13 数据报服务的特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-14-%E8%99%9A%E7%94%B5%E8%B7%AF%E6%9C%8D%E5%8A%A1%E4%B8%8E%E6%95%B0%E6%8D%AE%E6%8A%A5%E6%9C%8D%E5%8A%A1%E7%9A%84%E4%B8%BB%E8%A6%81%E5%8C%BA%E5%88%AB%EF%BC%887%E6%96%B9%E9%9D%A2%EF%BC%89"><span class="nav-number">3.14.</span> <span class="nav-text">3.14 虚电路服务与数据报服务的主要区别（7方面）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-15-X-25%E7%9A%84%E5%B1%82%E6%AC%A1%EF%BC%88%E4%B8%89%E5%B1%82%EF%BC%89"><span class="nav-number">3.15.</span> <span class="nav-text">3.15 X.25的层次（三层）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-16-%E5%B8%A7%E4%B8%AD%E7%BB%A7%E4%B8%8EX-25%E7%9A%84%E4%B8%BB%E8%A6%81%E5%8C%BA%E5%88%AB%EF%BC%88%E4%B8%89%E7%82%B9%EF%BC%89"><span class="nav-number">3.16.</span> <span class="nav-text">3.16 帧中继与X.25的主要区别（三点）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-17-%E5%B8%A7%E4%B8%AD%E7%BB%A7%E7%9A%84%E7%89%B9%E7%82%B9%EF%BC%88%E4%B8%89%E7%82%B9%EF%BC%89"><span class="nav-number">3.17.</span> <span class="nav-text">3.17 帧中继的特点（三点）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-18-PPP%E7%BB%84%E6%88%90%EF%BC%88%E4%B8%89%E9%83%A8%E5%88%86%EF%BC%89"><span class="nav-number">3.18.</span> <span class="nav-text">3.18 PPP组成（三部分）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-19-HDLC%E7%9A%84%E5%B8%A7%E7%BB%93%E6%9E%84"><span class="nav-number">3.19.</span> <span class="nav-text">3.19 HDLC的帧结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-20-%E7%BD%91%E6%A1%A5%E7%9A%84%E7%B1%BB%E5%9E%8B%EF%BC%88%E4%B8%A4%E7%A7%8D%EF%BC%89"><span class="nav-number">3.20.</span> <span class="nav-text">3.20 网桥的类型（两种）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E7%AB%A0"><span class="nav-number">4.</span> <span class="nav-text">第四章</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-%E7%BD%91%E7%BB%9C%E7%9A%84%E5%BC%82%E6%9E%84%E6%80%A7%E8%A1%A8%E7%8E%B0%E5%9C%A8%E5%93%AA%E4%BA%9B%E6%96%B9%E9%9D%A2%EF%BC%884%E6%96%B9%E9%9D%A2%EF%BC%89"><span class="nav-number">4.1.</span> <span class="nav-text">4.1 网络的异构性表现在哪些方面（4方面）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-%E4%B8%AD%E7%BB%A7%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%A7%8D%E7%B1%BB%EF%BC%885%E7%A7%8D%EF%BC%89"><span class="nav-number">4.2.</span> <span class="nav-text">4.2 中继系统的种类（5种）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-%E6%8B%A5%E5%A1%9E%E6%8E%A7%E5%88%B6%E7%AE%97%E6%B3%95%EF%BC%88%E5%9B%9B%E7%A7%8D%EF%BC%89"><span class="nav-number">4.3.</span> <span class="nav-text">4.3 拥塞控制算法（四种）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-%E8%B7%9D%E7%A6%BB%E5%90%91%E9%87%8F%E8%B7%AF%E7%94%B1%E7%AE%97%E6%B3%95"><span class="nav-number">4.4.</span> <span class="nav-text">4.4 距离向量路由算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-5-%E9%93%BE%E8%B7%AF%E7%8A%B6%E6%80%81%E8%B7%AF%E7%94%B1%E7%AE%97%E6%B3%95"><span class="nav-number">4.5.</span> <span class="nav-text">4.5 链路状态路由算法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-6-IP%E5%9C%B0%E5%9D%80%E7%9A%84%E5%88%86%E7%B1%BB%E5%8F%8A%E5%85%B6%E8%A1%A8%E7%A4%BA"><span class="nav-number">4.6.</span> <span class="nav-text">4.6 IP地址的分类及其表示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-7-IP%E6%95%B0%E6%8D%AE%E6%8A%A5%E7%9A%84%E7%BB%93%E6%9E%84%E5%8F%8A%E5%85%B6%E6%AF%8F%E4%B8%AA%E5%9F%9F%E7%9A%84%E6%84%8F%E4%B9%89"><span class="nav-number">4.7.</span> <span class="nav-text">4.7 IP数据报的结构及其每个域的意义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-8-%E5%AD%90%E7%BD%91%E5%8F%8A%E5%85%B6%E6%8E%A9%E7%A0%81"><span class="nav-number">4.8.</span> <span class="nav-text">4.8 子网及其掩码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-9-CIDR"><span class="nav-number">4.9.</span> <span class="nav-text">4.9 CIDR</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-10-ICMP%E5%B7%AE%E9%94%99%E6%8A%A5%E5%91%8A%E6%8A%A5%E6%96%87%E7%9A%84%E7%A7%8D%E7%B1%BB%EF%BC%885%E7%A7%8D%EF%BC%89"><span class="nav-number">4.10.</span> <span class="nav-text">4.10 ICMP差错报告报文的种类（5种）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-11-IPv6%E7%9A%84%E7%89%B9%E7%82%B9%EF%BC%889%E7%82%B9%EF%BC%89"><span class="nav-number">4.11.</span> <span class="nav-text">4.11 IPv6的特点（9点）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-12-OSPF"><span class="nav-number">4.12.</span> <span class="nav-text">4.12 OSPF</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-13-IP%E5%A4%9A%E6%92%AD%E7%9A%84%E6%A6%82%E5%BF%B5%E5%92%8C%E5%A4%9A%E6%92%AD%E5%9C%B0%E5%9D%80"><span class="nav-number">4.13.</span> <span class="nav-text">4.13 IP多播的概念和多播地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-14-%E8%BD%AC%E4%BA%A4%E5%9C%B0%E5%9D%80%E7%9A%84%E5%88%86%E7%B1%BB%EF%BC%882%E7%A7%8D%EF%BC%89"><span class="nav-number">4.14.</span> <span class="nav-text">4.14 转交地址的分类（2种）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-15-%E8%B7%AF%E7%94%B1%E5%99%A8%E7%9A%84%E4%BC%98%E7%BC%BA%E7%82%B9%EF%BC%887%E5%92%8C3%E7%82%B9%EF%BC%89"><span class="nav-number">4.15.</span> <span class="nav-text">4.15 路由器的优缺点（7和3点）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BC%98%E7%82%B9%EF%BC%9A"><span class="nav-number">4.15.1.</span> <span class="nav-text">优点：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%BC%BA%E7%82%B9%EF%BC%9A"><span class="nav-number">4.15.2.</span> <span class="nav-text">缺点：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%BA%94%E7%AB%A0"><span class="nav-number">5.</span> <span class="nav-text">第五章</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-%E4%BC%A0%E8%BE%93%E5%B1%82%E5%AF%BB%E5%9D%80%E4%B8%8E%E7%AB%AF%E5%8F%A3"><span class="nav-number">5.1.</span> <span class="nav-text">5.1 传输层寻址与端口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-%E6%97%A0%E8%BF%9E%E6%8E%A5%E6%9C%8D%E5%8A%A1%E4%B8%8E%E9%9D%A2%E5%90%91%E8%BF%9E%E6%8E%A5%E6%9C%8D%E5%8A%A1"><span class="nav-number">5.2.</span> <span class="nav-text">5.2 无连接服务与面向连接服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-3-%E4%BC%A0%E8%BE%93%E8%BF%9E%E6%8E%A5%E7%9A%84%E5%BB%BA%E7%AB%8B%E4%B8%8E%E9%87%8A%E6%94%BE"><span class="nav-number">5.3.</span> <span class="nav-text">5.3 传输连接的建立与释放</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-4-UDP%E7%9A%84%E4%BC%98%E7%82%B9%EF%BC%884%E7%82%B9%EF%BC%89"><span class="nav-number">5.4.</span> <span class="nav-text">5.4 UDP的优点（4点）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-5-TCP%E6%8A%A5%E6%96%87%E6%AE%B5%E6%8A%A5%E5%A4%B4%E6%A0%BC%E5%BC%8F"><span class="nav-number">5.5.</span> <span class="nav-text">5.5 TCP报文段报头格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-6-TCP%E7%9A%84%E6%B5%81%E9%87%8F%E6%8E%A7%E5%88%B6"><span class="nav-number">5.6.</span> <span class="nav-text">5.6 TCP的流量控制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-7-TCP%E7%9A%84%E6%8B%A5%E5%A1%9E%E6%8E%A7%E5%88%B6"><span class="nav-number">5.7.</span> <span class="nav-text">5.7 TCP的拥塞控制</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E5%85%AD%E7%AB%A0"><span class="nav-number">6.</span> <span class="nav-text">第六章</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1-%E4%B8%89%E5%B1%82C-S%E7%BB%93%E6%9E%84%E7%9A%84%E4%BC%98%E7%82%B9%EF%BC%884%E7%82%B9%EF%BC%89"><span class="nav-number">6.1.</span> <span class="nav-text">6.1 三层C&#x2F;S结构的优点（4点）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2-P2P%E6%8A%80%E6%9C%AF%E7%9A%84%E7%89%B9%E7%82%B9%EF%BC%886%E7%82%B9%EF%BC%89"><span class="nav-number">6.2.</span> <span class="nav-text">6.2 P2P技术的特点（6点）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-3-DNS%E7%9A%84%E5%B1%82%E6%AC%A1%E7%BB%93%E6%9E%84"><span class="nav-number">6.3.</span> <span class="nav-text">6.3 DNS的层次结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-4-%E5%9F%9F%E5%90%8D%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E7%B1%BB%E5%9E%8B%EF%BC%883%E7%A7%8D%EF%BC%89"><span class="nav-number">6.4.</span> <span class="nav-text">6.4 域名服务器的类型（3种）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-5-Internet%E7%9A%84%E5%BA%94%E7%94%A8%E5%8D%8F%E8%AE%AE-FTP-MIME-HTTP"><span class="nav-number">6.5.</span> <span class="nav-text">6.5 Internet的应用协议:FTP,MIME,HTTP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-6-Web%E9%A1%B5%E9%9D%A2%E6%96%87%E6%A1%A3%E7%9A%84%E5%88%86%E7%B1%BB%EF%BC%88%E4%B8%89%E7%A7%8D%EF%BC%89"><span class="nav-number">6.6.</span> <span class="nav-text">6.6 Web页面文档的分类（三种）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-7-%E7%94%9F%E6%88%90%E5%8A%A8%E6%80%81%E6%96%87%E6%A1%A3%E7%9A%84%E6%96%B9%E6%B3%95%EF%BC%884%E7%A7%8D%EF%BC%89"><span class="nav-number">6.7.</span> <span class="nav-text">6.7 生成动态文档的方法（4种）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-8-%E7%94%9F%E6%88%90%E6%B4%BB%E5%8A%A8%E6%96%87%E6%A1%A3%E7%9A%84%E6%96%B9%E6%B3%95%EF%BC%882%E7%A7%8D%EF%BC%89"><span class="nav-number">6.8.</span> <span class="nav-text">6.8 生成活动文档的方法（2种）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-9-URL%E7%9A%84%E6%A0%BC%E5%BC%8F"><span class="nav-number">6.9.</span> <span class="nav-text">6.9 URL的格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-10-%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E9%80%BB%E8%BE%91%E6%A8%A1%E5%9E%8B"><span class="nav-number">6.10.</span> <span class="nav-text">6.10 网络管理系统逻辑模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-11-%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86%E7%9A%84%E4%B8%BB%E8%A6%81%E5%8A%9F%E8%83%BD%EF%BC%885%E4%B8%AA%EF%BC%89"><span class="nav-number">6.11.</span> <span class="nav-text">6.11 网络管理的主要功能（5个）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-12-%E8%A2%AB%E7%AE%A1%E5%AF%B9%E8%B1%A1%E7%9A%84%E7%89%B9%E6%80%A7%EF%BC%885%E7%82%B9%EF%BC%89"><span class="nav-number">6.12.</span> <span class="nav-text">6.12 被管对象的特性（5点）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-13-SNMP%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%85%83%E7%B4%A0%EF%BC%88%E4%B8%89%E7%A7%8D%EF%BC%89"><span class="nav-number">6.13.</span> <span class="nav-text">6.13 SNMP的基本元素（三种）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-14-SNMPv3%E7%9A%84%E5%AE%89%E5%85%A8%E6%A8%A1%E5%BC%8F%EF%BC%882%E7%A7%8D%EF%BC%89"><span class="nav-number">6.14.</span> <span class="nav-text">6.14 SNMPv3的安全模式（2种）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%83%E7%AB%A0"><span class="nav-number">7.</span> <span class="nav-text">第七章</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#7-1-%E6%A0%87%E8%AE%B0%E4%BA%A4%E6%8D%A2%E5%8E%9F%E7%90%86"><span class="nav-number">7.1.</span> <span class="nav-text">7.1 标记交换原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-2-MPLS%E7%9A%84%E5%B0%81%E8%A3%85"><span class="nav-number">7.2.</span> <span class="nav-text">7.2 MPLS的封装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-3%E6%A0%87%E8%AE%B0%E5%88%86%E9%85%8D%E7%9A%84%E6%96%B9%E5%BC%8F%EF%BC%883%E7%A7%8D%EF%BC%89"><span class="nav-number">7.3.</span> <span class="nav-text">7.3标记分配的方式（3种）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-4-%E4%B8%8E%E4%BB%A5%E8%B7%AF%E7%94%B1%E5%99%A8%E4%BD%9C%E4%B8%BA%E6%A0%B8%E5%BF%83%E7%BD%91%E7%BB%9C%E5%B9%B3%E5%8F%B0%E7%9A%84%E6%8A%80%E6%9C%AF%E7%9B%B8%E6%AF%94%EF%BC%8CMPLS%E7%9A%84%E4%B8%BB%E8%A6%81%E4%BC%98%E7%82%B9%EF%BC%887%E7%82%B9%EF%BC%89"><span class="nav-number">7.4.</span> <span class="nav-text">7.4 与以路由器作为核心网络平台的技术相比，MPLS的主要优点（7点）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-5-Intserv%E7%9A%84%E5%B1%80%E9%99%90%E6%80%A7%EF%BC%885%E7%82%B9%EF%BC%89"><span class="nav-number">7.5.</span> <span class="nav-text">7.5 Intserv的局限性（5点）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-6-DiffServ%E7%9A%84%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84"><span class="nav-number">7.6.</span> <span class="nav-text">7.6 DiffServ的体系结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-7-DiffServ%E7%9A%84%E6%8A%80%E6%9C%AF%E7%89%B9%E7%82%B9%EF%BC%884%E7%82%B9%EF%BC%89"><span class="nav-number">7.7.</span> <span class="nav-text">7.7 DiffServ的技术特点（4点）</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E5%85%AB%E7%AB%A0"><span class="nav-number">8.</span> <span class="nav-text">第八章</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#8-1-%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E7%9A%84%E4%B8%89%E4%B8%AA%E6%96%B9%E9%9D%A2"><span class="nav-number">8.1.</span> <span class="nav-text">8.1 系统安全的三个方面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-2-IPSec%E7%9A%84%E4%B8%BB%E8%A6%81%E4%BC%98%E7%82%B9"><span class="nav-number">8.2.</span> <span class="nav-text">8.2 IPSec的主要优点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-3-%E9%98%B2%E7%81%AB%E5%A2%99%E6%8A%80%E6%9C%AF%E7%9A%84%E7%A7%8D%E7%B1%BB"><span class="nav-number">8.3.</span> <span class="nav-text">8.3 防火墙技术的种类</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Alex"
+      src="/images/mr.jpg">
+  <p class="site-author-name" itemprop="name">Alex</p>
+  <div class="site-description" itemprop="description">我们不妨大胆些，爱一个人，攀一座山，追一个梦</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">4</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/zzyko" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;zzyko" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:2582299847@qq.com" title="E-Mail → mailto:2582299847@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/MiserableBo" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;MiserableBo" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+      </span>
+  </div>
+  <div class="cc-license motion-element" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="/images/cc-by-nc-sa.svg" alt="Creative Commons"></a>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://blog.yxqz.top/" title="https:&#x2F;&#x2F;blog.yxqz.top" rel="noopener" target="_blank">鱼香茄子</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+      <!-- 网易云音乐外链 -->
+      <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=416892296&auto=0&height=66"></iframe>
+      <!-- 网易云音乐外链end -->
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2021 – 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Alex</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-area"></i>
+    </span>
+    <span title="站点总字数">119k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">1:48</span>
+</div>
+
+<!-- hexo页面底部添加网站运行时间 -->
+<span id="sitetime"></span>
+<script language=javascript>
+	function siteTime(){
+		window.setTimeout("siteTime()", 1000);
+		var seconds = 1000;
+		var minutes = seconds * 60;
+		var hours = minutes * 60;
+		var days = hours * 24;
+		var years = days * 365;
+		var today = new Date();
+		var todayYear = today.getFullYear();
+		var todayMonth = today.getMonth()+1;
+		var todayDate = today.getDate();
+		var todayHour = today.getHours();
+		var todayMinute = today.getMinutes();
+		var todaySecond = today.getSeconds();
+		/* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+		year - 作为date对象的年份，为4位年份值
+		month - 0-11之间的整数，做为date对象的月份
+		day - 1-31之间的整数，做为date对象的天数
+		hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+		minutes - 0-59之间的整数，做为date对象的分钟数
+		seconds - 0-59之间的整数，做为date对象的秒数
+		microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+		var t1 = Date.UTC(2021,09,18,15,00,00); //北京时间2018-2-13 00:00:00
+		var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
+		var diff = t2-t1;
+		var diffYears = Math.floor(diff/years);
+		var diffDays = Math.floor((diff/days)-diffYears*365);
+		var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+		var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+		var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+		document.getElementById("sitetime").innerHTML=" 本站已运行"+/*diffYears+" 年 "+*/diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
+	}/*因为建站时间还没有一年，就将之注释掉了。需要的可以取消*/
+	siteTime();
+</script>
+<!-- hexo页面底部添加网站运行时间end -->
+
+        
+
+
+
+
+
+
+<script>
+  (function() {
+    function leancloudSelector(url) {
+      url = encodeURI(url);
+      return document.getElementById(url).querySelector('.leancloud-visitors-count');
+    }
+
+    function addCount(Counter) {
+      var visitors = document.querySelector('.leancloud_visitors');
+      var url = decodeURI(visitors.id);
+      var title = visitors.dataset.flagTitle;
+
+      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url })))
+        .then(response => response.json())
+        .then(({ results }) => {
+          if (results.length > 0) {
+            var counter = results[0];
+            leancloudSelector(url).innerText = counter.time + 1;
+            Counter('put', '/classes/Counter/' + counter.objectId, { time: { '__op': 'Increment', 'amount': 1 } })
+              .catch(error => {
+                console.error('Failed to save visitor count', error);
+              });
+          } else {
+              Counter('post', '/classes/Counter', { title, url, time: 1 })
+                .then(response => response.json())
+                .then(() => {
+                  leancloudSelector(url).innerText = 1;
+                })
+                .catch(error => {
+                  console.error('Failed to create', error);
+                });
+          }
+        })
+        .catch(error => {
+          console.error('LeanCloud Counter Error', error);
+        });
+    }
+
+    function showTime(Counter) {
+      var visitors = document.querySelectorAll('.leancloud_visitors');
+      var entries = [...visitors].map(element => {
+        return decodeURI(element.id);
+      });
+
+      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url: { '$in': entries } })))
+        .then(response => response.json())
+        .then(({ results }) => {
+          for (let url of entries) {
+            let target = results.find(item => item.url === url);
+            leancloudSelector(url).innerText = target ? target.time : 0;
+          }
+        })
+        .catch(error => {
+          console.error('LeanCloud Counter Error', error);
+        });
+    }
+
+    let { app_id, app_key, server_url } = {"enable":true,"app_id":"1T1B8fHvajUET6TVf8MS6Ld2-gzGzoHsz","app_key":"ErhhlMqpDcOtv8XEVAqwewhM","server_url":null,"security":false};
+    function fetchData(api_server) {
+      var Counter = (method, url, data) => {
+        return fetch(`${api_server}/1.1${url}`, {
+          method,
+          headers: {
+            'X-LC-Id'     : app_id,
+            'X-LC-Key'    : app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      if (CONFIG.page.isPost) {
+        if (CONFIG.hostname !== location.hostname) return;
+        addCount(Counter);
+      } else if (document.querySelectorAll('.post-title-link').length >= 1) {
+        showTime(Counter);
+      }
+    }
+
+    let api_server = app_id.slice(-9) !== '-MdYXbMMI' ? server_url : `https://${app_id.slice(0, 8).toLowerCase()}.api.lncldglobal.com`;
+
+    if (api_server) {
+      fetchData(api_server);
+    } else {
+      fetch('https://app-router.leancloud.cn/2/route?appId=' + app_id)
+        .then(response => response.json())
+        .then(({ api_server }) => {
+          fetchData('https://' + api_server);
+        });
+    }
+  })();
+</script>
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+
+<script>
+NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
+  NexT.utils.getScript('//unpkg.com/valine/dist/Valine.min.js', () => {
+    var GUEST = ['nick', 'mail', 'link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item => {
+      return GUEST.includes(item);
+    });
+    new Valine({
+      el         : '#valine-comments',
+      verify     : false,
+      notify     : false,
+      appId      : 'UCGlGy2LALXrQ8w8Kj4aPNGh-gzGzoHsz',
+      appKey     : 'O9TVqQA3HSsKi7NgM0wIszKl',
+      placeholder: "Just saying...",
+      avatar     : 'mm',
+      meta       : guest,
+      pageSize   : '10' || 10,
+      visitor    : false,
+      lang       : '' || 'zh-cn',
+      path       : location.pathname,
+      recordIP   : false,
+      serverURLs : ''
+    });
+  }, window.Valine);
+});
+</script>
+
+
+  
+     <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas>
+     <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+     <script type="text/javascript" src="/js/fireworks.js"></script>
+  
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"model":{"jsonPath":"/live2dw/assets/wanko.model.json"},"display":{"position":"left","width":150,"height":200},"mobile":{"show":true},"log":false});</script></body>
+</html>
